@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const apiRoot = 'http://localhost:8080/v1/task/';
-  const trelloApiRoot = 'http://localhost:8080/v1/trello/';
+  const apiRoot = 'https://whispering-bastion-50699.herokuapp.com/v1/';
+  const trelloApiRoot = 'https://whispering-bastion-50699.herokuapp.com/v1/tasks/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
