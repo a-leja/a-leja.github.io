@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const apiRoot = 'https://whispering-bastion-50699.herokuapp.com/v1/';
-  const trelloApiRoot = 'https://whispering-bastion-50699.herokuapp.com/v1/trello/';
+  const apiRoot = 'https://whispering-bastion-50699.herokuapp.com/v1';
+  const trelloApiRoot = 'https://whispering-bastion-50699.herokuapp.com/v1/trello';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
@@ -111,8 +111,7 @@ $(document).ready(function() {
     var requestUrl = apiRoot + 'tasks';
 
     $.ajax({
-      url: requestUrl + taskId
-      }),
+      url: requestUrl + '/' + taskId,
       method: 'DELETE',
       success: function() {
         parentEl.slideUp(400, function() { parentEl.remove(); });
